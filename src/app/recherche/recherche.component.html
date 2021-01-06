@@ -1,0 +1,27 @@
+<div class="card card-header text-white bg-success">
+    <h6>
+      Liste des PFEs
+    </h6>
+  </div>
+  <table class="table table-bordered">
+   
+    <thead>
+      
+      <tr class="table-active">
+        <th scope="col">ID</th>
+        <th scope="col">Titre</th>
+        <th scope="col">Type</th>
+        <th scope="col">ACTION</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr *ngFor="let r of result ">
+        <th scope="row">{{r.id}}</th>
+        <td >{{r.titre}}</td>
+        <td>{{r.type.nom}}</td>
+        <td><button (click)="delete(r.id)" class="btn btn-danger">Delete</button></td>
+      </tr>
+      
+    </tbody>
+  </table>
